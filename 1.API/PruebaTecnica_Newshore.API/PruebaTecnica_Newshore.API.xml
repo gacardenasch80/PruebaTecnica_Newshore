@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PruebaTecnica_Newshore.API</name>
+    </assembly>
+    <members>
+        <member name="T:PruebaTecnica_Newshore.API.Controllers.JourneyController">
+            <summary>
+            Controlador AuthorsController
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_Newshore.API.Controllers.JourneyController.JourneyGet(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Function to get a Journey
+            </summary>
+            <param name="origin"></param>
+            <param name="destination"></param>
+            <returns>Expense type list</returns>
+            <response code="200">Returns the get item</response>
+            <response code="400">Model is not valid</response>
+        </member>
+        <member name="T:PruebaTecnica_Newshore.API.Model.AppSettings">
+            <summary>
+            Clase AppSettings
+            </summary>
+        </member>
+        <member name="P:PruebaTecnica_Newshore.API.Model.AppSettings.Secret">
+            <summary>
+            Semilla para encriptar 
+            </summary>
+        </member>
+        <member name="T:PruebaTecnica_Newshore.API.Startup">
+            <summary>
+            Clase Startup
+            </summary>
+        </member>
+        <member name="M:PruebaTecnica_Newshore.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Class constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+    </members>
+</doc>
