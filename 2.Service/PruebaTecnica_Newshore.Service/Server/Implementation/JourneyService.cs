@@ -55,12 +55,13 @@ namespace PruebaTecnica_Newshore.Service.Server.Implementation
                     result.Journey = null; // No se encontró una ruta válida
                     break;
                 }
-
-                if (count > numeroMaxVuelos) {
-                    result.Journey = null; // El numero maximo de vuelos fue superado
-                    break;
+                if ((numeroMaxVuelos!=null) && (numeroMaxVuelos >= 0))
+                {
+                    if (count > numeroMaxVuelos) {
+                        result.Journey = null; // El numero maximo de vuelos fue superado
+                        break;
+                    }
                 }
-
                 Flight flight = new Flight
                 {
                     Origin = nextFlight.DepartureStation,

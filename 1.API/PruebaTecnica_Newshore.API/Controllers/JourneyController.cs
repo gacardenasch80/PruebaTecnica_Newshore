@@ -30,14 +30,18 @@ namespace PruebaTecnica_Newshore.API.Controllers
         /// </summary>
         /// <param name="origin"></param>
         /// <param name="destination"></param>
+        /// <param name="numeroMaxVuelos"></param>
         /// <returns>Expense type list</returns>
         /// <response code="200">Returns the get item</response>
         /// <response code="400">Model is not valid</response>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<FlightRouteResult>> JourneyGet(string origin, string destination, int? numeroMaxVuelos)
+        public async Task<ActionResult<FlightRouteResult>> JourneyGet(string origin, string destination, string numeroMaxVuelos = "")
         {
-            var response = await _service.JourneyGet(origin, destination, numeroMaxVuelos);
+            if (string.IsNullOrEmpty(numeroMaxVuelos)) {
+                numeroMaxVuelos = "-1";
+            }
+            var response = await _service.JourneyGet(origin, destination, Int32.Parse(numeroMaxVuelos));
             return Ok(response);
         }
     }

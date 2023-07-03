@@ -9,12 +9,13 @@
             Controlador AuthorsController
             </summary>
         </member>
-        <member name="M:PruebaTecnica_Newshore.API.Controllers.JourneyController.JourneyGet(System.String,System.String,System.Nullable{System.Int32})">
+        <member name="M:PruebaTecnica_Newshore.API.Controllers.JourneyController.JourneyGet(System.String,System.String,System.String)">
             <summary>
             Function to get a Journey
             </summary>
             <param name="origin"></param>
             <param name="destination"></param>
+            <param name="numeroMaxVuelos"></param>
             <returns>Expense type list</returns>
             <response code="200">Returns the get item</response>
             <response code="400">Model is not valid</response>
